@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e0f7fa; -fx-border-color: #000; -fx-border-width: 2; -fx-border-radius: 3;" stylesheets="@../../css/common.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.system.LoginController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="52.0" prefWidth="200.0" style="-fx-background-color: #4dd0e1;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="238.0" layoutY="14.0" text="Admin Login">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Label>
+                  <Label layoutX="571.0" layoutY="6.0" stylesheets="@../../css/common.css">
+                     <graphic>
+                        <MaterialDesignIconView fx:id="lblClose" glyphName="CLOSE_CIRCLE" onMouseClicked="#mouseClick" size="22">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MaterialDesignIconView>
+                     </graphic>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <MaterialDesignIconView glyphName="ACCOUNT" layoutX="159.0" layoutY="123.0" size="40" />
+                  <MaterialDesignIconView glyphName="LOCK" layoutX="162.0" layoutY="195.0" size="35" />
+                  <JFXTextField fx:id="txtEmail" labelFloat="true" layoutX="218.0" layoutY="84.0" prefHeight="40.0" prefWidth="210.0" promptText="Email">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutX="218.0" layoutY="159.0" prefHeight="35.0" prefWidth="210.0" promptText="Password">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton layoutX="213.0" layoutY="227.0" onAction="#loginAdmin" prefHeight="24.0" prefWidth="219.0" style="-fx-background-color: #4dd0e1; -fx-border-color: #000; -fx-border-radius: 7;" stylesheets="@../../css/common.css" text="Login">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView glyphName="LOGIN" size="20" styleClass="glyph-icon" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label fx:id="lblForget" layoutX="324.0" layoutY="273.0" onMouseClicked="#mouseClick" styleClass="seto" stylesheets="@../../css/common.css" text="Forget Password??" underline="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="13.5" />
+                     </font>
+                  </Label>
+                  <Label layoutX="211.0" layoutY="275.0" text="Signup">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSignup" layoutX="254.0" layoutY="275.0" onMouseClicked="#mouseClick" styleClass="seto" stylesheets="@../../css/common.css" text=" here??" underline="true">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <JFXSpinner fx:id="lblSpinner" layoutX="294.0" layoutY="302.0" radius="16.0" />
+               </children>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </AnchorPane>
+         </center>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </BorderPane>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

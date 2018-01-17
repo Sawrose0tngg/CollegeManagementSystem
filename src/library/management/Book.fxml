@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="680.0" prefWidth="1100.0" stylesheets="@../../css/custom.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.management.BookController">
+   <children>
+      <StackPane fx:id="rootPane" onMouseClicked="#rootPaneClick" prefHeight="680.0" prefWidth="1100.0" />
+      <BorderPane prefHeight="680.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="50.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="15.0" layoutY="2.0" prefHeight="39.0" prefWidth="1065.0" style="-fx-background-color: #932b2b; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 5;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="20.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="255.0" layoutY="6.0" prefHeight="27.0" prefWidth="556.0" text="BOOK" textFill="WHITE" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="254.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="1068.0" stylesheets="@../../css/student.css" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXTabPane layoutX="17.0" layoutY="100.0" prefHeight="527.0" prefWidth="1068.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab text="Add Book">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane layoutX="90.0" layoutY="42.0" prefHeight="528.0" prefWidth="412.0" styleClass="card-white" stylesheets="@../../css/student.css" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="566.0">
+                                       <children>
+                                          <GridPane layoutX="40.0" layoutY="44.0" prefHeight="452.0" prefWidth="334.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <JFXTextField fx:id="txtName" focusColor="#2196f3" labelFloat="true" maxWidth="417.0" minWidth="224.0" prefHeight="38.0" prefWidth="417.0" promptText="Book Name">
+                                                   <font>
+                                                      <Font name="Roboto Medium" size="14.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </JFXTextField>
+                                                <JFXComboBox fx:id="comboCourse" prefHeight="36.0" prefWidth="395.0" promptText="Course" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets left="8.0" />
+                                                   </GridPane.margin>
+                                                </JFXComboBox>
+                                                <JFXComboBox fx:id="comboSemester" layoutX="18.0" layoutY="110.0" prefHeight="34.0" prefWidth="397.0" promptText="Semester" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets left="8.0" />
+                                                   </GridPane.margin>
+                                                </JFXComboBox>
+                                                <JFXTextField fx:id="txtAuthor" focusColor="#2196f3" labelFloat="true" layoutX="10.0" layoutY="174.0" maxWidth="420.0" minWidth="224.0" prefHeight="38.0" prefWidth="420.0" promptText="Author" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font name="Roboto Medium" size="14.0" />
+                                                   </font>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="txtPublisher" focusColor="#2196f3" labelFloat="true" layoutX="10.0" layoutY="249.0" maxWidth="438.0" minWidth="224.0" prefHeight="38.0" prefWidth="438.0" promptText="Publisher" GridPane.rowIndex="4">
+                                                   <font>
+                                                      <Font name="Roboto Medium" size="14.0" />
+                                                   </font>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="txtNumber" focusColor="#2196f3" labelFloat="true" layoutX="10.0" layoutY="29.0" maxWidth="423.0" minWidth="224.0" prefHeight="38.0" prefWidth="423.0" promptText="Number of Books" GridPane.rowIndex="5">
+                                                   <font>
+                                                      <Font name="Roboto Medium" size="14.0" />
+                                                   </font>
+                                                </JFXTextField>
+                                             </children>
+                                          </GridPane>
+                                          <Pane layoutX="14.0" layoutY="-25.0" prefHeight="51.0" prefWidth="186.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4; -fx-background-color: #0097A7;">
+                                             <children>
+                                                <Label layoutX="38.0" layoutY="8.0" prefHeight="35.0" prefWidth="111.0" text="Book Details" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Roboto Medium" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="540.0" layoutY="42.0" prefHeight="323.0" prefWidth="422.0" styleClass="card-white" stylesheets="@../../css/student.css">
+                                       <children>
+                                          <GridPane layoutX="40.0" layoutY="44.0" prefHeight="174.0" prefWidth="334.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <JFXTextField fx:id="txtId" editable="false" focusColor="#2196f3" labelFloat="true" maxWidth="417.0" minWidth="224.0" prefHeight="38.0" prefWidth="417.0" promptText="Book ID">
+                                                   <font>
+                                                      <Font name="Roboto Medium" size="14.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </JFXTextField>
+                                             </children>
+                                          </GridPane>
+                                          <Pane layoutX="14.0" layoutY="-25.0" prefHeight="51.0" prefWidth="186.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4; -fx-background-color: #0097A7;">
+                                             <children>
+                                                <Label layoutX="38.0" layoutY="8.0" prefHeight="35.0" prefWidth="111.0" text="Library Details" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Roboto Medium" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <JFXButton layoutX="176.0" layoutY="243.0" onAction="#saveBooks" style="-fx-background-color: #13865a;" text="Save" textFill="WHITE">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="18" />
+                                             </graphic>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <effect>
+                                                <InnerShadow />
+                                             </effect>
+                                          </JFXButton>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="View Book">
+                           <content>
+                              <AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1100.0" stylesheets="@../../css/custom.css">
+                                 <children>
+                                    <StackPane layoutX="-15.0" layoutY="1.0" prefHeight="594.0" prefWidth="1100.0">
+                                       <children>
+                                          <BorderPane prefHeight="639.0" prefWidth="1073.0">
+                                             <top>
+                                                <AnchorPane prefHeight="121.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <AnchorPane layoutX="20.0" layoutY="31.0" prefHeight="79.0" prefWidth="1060.0" style="-fx-background-color: #f57c00; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 5;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                                                         <children>
+                                                            <Pane layoutX="22.0" layoutY="-26.0" prefHeight="79.0" prefWidth="86.0" style="-fx-background-color: #ab000d; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4;">
+                                                               <children>
+                                                                  <MaterialDesignIconView fill="WHITE" glyphName="BOOK_MULTIPLE_VARIANT" layoutX="21.0" layoutY="56.0" size="45" />
+                                                               </children>
+                                                            </Pane>
+                                                            <Label layoutX="140.0" layoutY="8.0" prefHeight="28.0" prefWidth="115.0" text="Filter by :" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="Roboto Black" size="19.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXTextField fx:id="txtSearch" focusColor="WHITE" labelFloat="true" layoutX="716.0" layoutY="24.0" maxWidth="214.0" minWidth="214.0" prefHeight="31.0" prefWidth="214.0" promptText="Search By Book ID" style="-fx-text-fill: #000; -fx-prompt-text-fill: #6d4c41;" unFocusColor="BLACK" AnchorPane.rightAnchor="130.0">
+                                                               <font>
+                                                                  <Font name="Roboto Black" size="13.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                            <JFXButton buttonType="RAISED" layoutX="948.0" layoutY="25.0" onAction="#searchBook" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #008e76;" text="Search" textFill="#fffefe" AnchorPane.rightAnchor="27.0">
+                                                               <font>
+                                                                  <Font name="Roboto Black" size="13.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="14.0" wrappingWidth="19.0" />
+                                                               </graphic>
+                                                               <cursor>
+                                                                  <Cursor fx:constant="HAND" />
+                                                               </cursor>
+                                                            </JFXButton>
+                                                            <JFXComboBox fx:id="comboCourse1" layoutX="248.0" layoutY="17.0" prefHeight="35.0" prefWidth="128.0" promptText="Course">
+                                                               <cursor>
+                                                                  <Cursor fx:constant="HAND" />
+                                                               </cursor></JFXComboBox>
+                                                            <JFXComboBox fx:id="comboSemester1" layoutX="425.0" layoutY="17.0" prefHeight="35.0" prefWidth="128.0" promptText="Semester">
+                                                               <cursor>
+                                                                  <Cursor fx:constant="HAND" />
+                                                               </cursor></JFXComboBox>
+                                                            <JFXButton buttonType="RAISED" layoutX="600.0" layoutY="28.0" onAction="#showAll" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: #0277bd;" text="Show All" textFill="#fffefe">
+                                                               <font>
+                                                                  <Font name="Roboto Black" size="13.0" />
+                                                               </font>
+                                                               <cursor>
+                                                                  <Cursor fx:constant="HAND" />
+                                                               </cursor>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </top>
+                                             <center>
+                                                <AnchorPane prefHeight="473.0" prefWidth="1072.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <TableView fx:id="bookTable" layoutX="23.0" prefHeight="472.0" prefWidth="1059.0" stylesheets="@../../css/student.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="colSno" prefWidth="42.0" text="S.no" />
+                                                            <TableColumn fx:id="colId" prefWidth="79.0" text="Book ID" />
+                                                            <TableColumn fx:id="colName" prefWidth="144.0" text="Book Name" />
+                                                            <TableColumn fx:id="colAuthor" prefWidth="144.0" text="Author" />
+                                                            <TableColumn fx:id="colPublisher" minWidth="0.0" prefWidth="171.0" text="Publisher" />
+                                                            <TableColumn fx:id="colNumber" minWidth="0.0" prefWidth="118.0" text="Number of Books" />
+                                                            <TableColumn fx:id="colCourse" prefWidth="97.0" text="Course" />
+                                                            <TableColumn fx:id="colSemester" prefWidth="114.0" text="Semester" />
+                                                            <TableColumn fx:id="colEdit" prefWidth="69.0" text="Edit" />
+                                                            <TableColumn fx:id="colDelete" prefWidth="88.0" text="Delete" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </AnchorPane>
+                                             </center>
+                                          </BorderPane>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets left="16.0" right="16.0" />
+               </BorderPane.margin>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

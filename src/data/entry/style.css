@@ -1,0 +1,33 @@
+.jfx-tab-pane .headers-region{
+    -fx-background-color: brown;
+}
+.jfx-tab-pane .tab-header-background{
+    -fx-background-color: brown;
+}
+.jfx-tab-pane .tab-selected-line{
+    -fx-stroke: #FFFFFF;
+    -fx-stroke-width: 3pt;
+}
+.titledPane{
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+
+
+}
+.titledPane>.title{
+    -fx-background-color: #31445A;
+    -fx-font-family:'Roboto medium' ;
+    -fx-font-size:13;
+}
+.titledPane> .title> .arrow-button .arrow{
+    -fx-background-color: white;
+}
+.combo-box .list-cell {
+    -fx-text-fill:#ffffff;
+}
+.comboBox .list-cell {
+    -fx-text-fill:#000;
+}
+.glyph-icon:hover {
+    -fx-fill: #000;
+}

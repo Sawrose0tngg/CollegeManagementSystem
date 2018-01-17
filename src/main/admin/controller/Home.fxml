@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="540.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.admin.controller.HomeController">
+   <children>
+      <HBox fx:id="groupHolder" layoutY="-1.0" prefHeight="165.0" prefWidth="750.0">
+         <children>
+            <Group fx:id="groupMain">
+               <children>
+                  <Pane layoutX="6.0" layoutY="39.0" prefHeight="114.0" prefWidth="238.0" style="-fx-background-color: white; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                     <children>
+                        <Pane layoutX="9.0" layoutY="-29.0" prefHeight="78.0" prefWidth="100.0" style="-fx-background-color: #1564C0; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_STAR_VARIANT" layoutX="20.0" layoutY="61.0" size="60" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="11.0" layoutY="76.0" minHeight="5.0" prefHeight="5.0" prefWidth="219.0" style="-fx-background-color: #283593; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                        <Label layoutX="29.0" layoutY="89.0" prefHeight="22.0" prefWidth="183.0" text="Total number of main admin">
+                           <font>
+                              <Font name="Roboto Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="128.0" layoutY="4.0" prefHeight="22.0" prefWidth="100.0" text="MAIN ADMIN" textFill="#8d8b8b">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblMain" alignment="TOP_RIGHT" layoutX="143.0" layoutY="37.0" prefHeight="22.0" prefWidth="88.0" text="118">
+                           <font>
+                              <Font name="Roboto Black" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Group>
+            <Group fx:id="groupApprove" layoutX="10.0" layoutY="10.0">
+               <children>
+                  <Pane layoutX="6.0" layoutY="39.0" prefHeight="114.0" prefWidth="238.0" style="-fx-background-color: white; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                     <children>
+                        <Pane layoutX="9.0" layoutY="-29.0" prefHeight="78.0" prefWidth="100.0" style="-fx-background-color: #00A65A; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CHECK" layoutX="18.0" layoutY="63.0" size="65" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="11.0" layoutY="76.0" minHeight="5.0" prefHeight="5.0" prefWidth="219.0" style="-fx-background-color: #00A65A; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                        <Label layoutX="21.0" layoutY="89.0" prefHeight="22.0" prefWidth="200.0" text="Total number of approve admin">
+                           <font>
+                              <Font name="Roboto Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="119.0" layoutY="4.0" prefHeight="22.0" prefWidth="113.0" text="APPROVE ADMIN" textFill="#8d8b8b">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblApprove" alignment="TOP_RIGHT" layoutX="143.0" layoutY="37.0" prefHeight="22.0" prefWidth="88.0" text="118">
+                           <font>
+                              <Font name="Roboto Black" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Group>
+            <Group fx:id="groupRequest" layoutX="260.0" layoutY="10.0">
+               <children>
+                  <Pane layoutX="6.0" layoutY="39.0" prefHeight="114.0" prefWidth="238.0" style="-fx-background-color: white; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                     <children>
+                        <Pane layoutX="9.0" layoutY="-29.0" prefHeight="78.0" prefWidth="100.0" style="-fx-background-color: #DD4B39; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_PLUS" layoutX="20.0" layoutY="61.0" size="60" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="11.0" layoutY="76.0" minHeight="5.0" prefHeight="5.0" prefWidth="219.0" style="-fx-background-color: #DD4B39; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                        <Label layoutX="24.0" layoutY="89.0" prefHeight="22.0" prefWidth="194.0" text="Total number of request admin">
+                           <font>
+                              <Font name="Roboto Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="118.0" layoutY="4.0" prefHeight="22.0" prefWidth="113.0" text="REQUEST ADMIN" textFill="#8d8b8b">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblRequest" alignment="TOP_RIGHT" layoutX="143.0" layoutY="37.0" prefHeight="22.0" prefWidth="88.0" text="118">
+                           <font>
+                              <Font name="Roboto Black" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Group>
+         </children>
+      </HBox>
+      <Separator layoutX="23.0" layoutY="173.0" prefHeight="5.0" prefWidth="704.0" />
+      <AnchorPane layoutX="6.0" layoutY="179.0" prefHeight="356.0" prefWidth="738.0">
+         <children>
+            <Pane layoutX="6.0" layoutY="7.0" prefHeight="35.0" prefWidth="194.0" style="-fx-background-color: #2A3F54; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+               <children>
+                  <Label layoutX="36.0" layoutY="5.0" text="Send Notification" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="14.0" layoutY="66.0" text="Admin Type:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="comboAdmin" layoutX="103.0" layoutY="62.0" prefHeight="25.0" prefWidth="142.0" promptText="Select Admin " />
+            <JFXTextArea fx:id="txtMessage" layoutX="12.0" layoutY="107.0" maxWidth="719.0" minWidth="719.0" prefHeight="114.0" prefWidth="719.0" promptText="Message">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextArea>
+            <JFXButton layoutX="14.0" layoutY="242.0" onAction="#sendNotification" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: #26B99A;" text="Send">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

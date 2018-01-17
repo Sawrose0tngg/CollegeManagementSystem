@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1300.0" style="-fx-border-color: #000; -fx-border-width: 2; -fx-border-radius: 8;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account.management.DashboardController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <VBox fx:id="overflowContainer" prefHeight="104.0" prefWidth="164.0" styleClass="card-white" stylesheets="@../../css/student.css">
+               <children>
+                  <JFXButton fx:id="btnLogOut" onAction="#logOff" prefHeight="52.0" prefWidth="163.0" style="-fx-alignment: left;" stylesheets="@../../css/student.css" text="Log out">
+                     <font>
+                        <Font name="Roboto Medium" size="13.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="#838080" glyphName="LOGOUT" size="16.0" wrappingWidth="36.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnExit" layoutX="10.0" layoutY="10.0" onAction="#editProfile" prefHeight="53.0" prefWidth="163.0" style="-fx-alignment: left;" stylesheets="@../../css/student.css" text="Edit Profile">
+                     <font>
+                        <Font name="Roboto Medium" size="13.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="#838080" glyphName="SETTINGS" size="16.0" wrappingWidth="36.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <BorderPane fx:id="borderPane" prefHeight="517.0" prefWidth="852.0">
+         <top>
+            <AnchorPane prefHeight="66.0" prefWidth="852.0" style="-fx-background-color: #00796B;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="290.0" layoutY="10.0" prefHeight="36.0" prefWidth="273.0" text="Account Management" textFill="WHITE" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="289.0">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MODX" size="30" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <MaterialDesignIconView fx:id="iconClose" fill="WHITE" glyphName="CLOSE_CIRCLE" layoutX="825.0" layoutY="23.0" onMouseClicked="#mouseClickAction" size="18" AnchorPane.rightAnchor="9.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></MaterialDesignIconView>
+                  <MaterialDesignIconView fx:id="iconMax" fill="WHITE" glyphName="CHECKBOX_MULTIPLE_BLANK" layoutX="798.0" layoutY="24.0" onMouseClicked="#mouseClickAction" size="18" AnchorPane.rightAnchor="36.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></MaterialDesignIconView>
+                  <MaterialDesignIconView fx:id="iconMin" fill="WHITE" glyphName="MINUS_CIRCLE" layoutX="768.0" layoutY="24.0" onMouseClicked="#mouseClickAction" size="18" AnchorPane.rightAnchor="66.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></MaterialDesignIconView>
+                  <Label fx:id="lblMenu" layoutX="906.0" layoutY="28.0" prefHeight="38.0" prefWidth="21.0" AnchorPane.rightAnchor="4.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="DOTS_VERTICAL" size="22" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane fx:id="holderPane" prefHeight="654.0" prefWidth="1207.0" BorderPane.alignment="CENTER" />
+         </center>
+         <left>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="182.0" style="-fx-background-color: #fff; -fx-background-radius: 6;" styleClass="side-bar" stylesheets="@../../css/student.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="109.0" prefWidth="182.0">
+                     <children>
+                        <ImageView fitHeight="133.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../../image/collections/studentHeader.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <GridPane prefHeight="211.0" prefWidth="182.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <JFXButton alignment="BASELINE_LEFT" onAction="#openHome" prefHeight="51.0" prefWidth="182.0" styleClass="side-buttons" stylesheets="@../../css/student.css" text="Home">
+                           <graphic>
+                              <MaterialDesignIconView glyphName="HOME" size="25" wrappingWidth="46.0" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onAction="#studentPage" prefHeight="51.0" prefWidth="182.0" styleClass="side-buttons" stylesheets="@../../css/student.css" text="Student Fee" GridPane.rowIndex="1">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="MORTAR_BOARD" size="20" wrappingWidth="46.714284896850586" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onAction="#teacherPage" prefHeight="51.0" prefWidth="182.0" styleClass="side-buttons" stylesheets="@../../css/student.css" text="Teacher Salary" GridPane.rowIndex="2">
+                           <graphic>
+                              <MaterialDesignIconView glyphName="ACCOUNT_CIRCLE" size="25" wrappingWidth="50.0" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onAction="#staffPage" prefHeight="51.0" prefWidth="182.0" styleClass="side-buttons" stylesheets="@../../css/student.css" text="Staff Salary" GridPane.rowIndex="3">
+                           <graphic>
+                              <MaterialDesignIconView glyphName="WORKER" size="25" wrappingWidth="50.0" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </GridPane>
+               </children>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</StackPane>

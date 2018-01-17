@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#sentToBack" prefHeight="611.0" prefWidth="1096.0" style=": ;" stylesheets="@../../../../../../Downloads/Compressed/TransportFX-master/src/transportfx/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="data.entry.DataEntryController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <VBox fx:id="overflowContainer" prefHeight="104.0" prefWidth="164.0" styleClass="card-white" stylesheets="@../../css/student.css">
+               <children>
+                  <JFXButton fx:id="btnLogOut" onAction="#logOff" prefHeight="52.0" prefWidth="163.0" style="-fx-alignment: left;" stylesheets="@../../css/student.css" text="Log out">
+                     <font>
+                        <Font name="Roboto Medium" size="13.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="#838080" glyphName="LOGOUT" size="16.0" wrappingWidth="36.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnEdit" layoutX="10.0" layoutY="10.0" onAction="#editProfileAction" prefHeight="53.0" prefWidth="163.0" style="-fx-alignment: left;" stylesheets="@../../css/student.css" text="Edit Profile">
+                     <font>
+                        <Font name="Roboto Medium" size="13.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fx:id="btnEditProfile" fill="#838080" glyphName="SETTINGS" size="16.0" wrappingWidth="36.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <BorderPane fx:id="borderPane" prefHeight="585.0" prefWidth="1096.0" style=": ;">
+         <top>
+            <AnchorPane prefHeight="65.0" prefWidth="1062.0" style="-fx-background-color: #00796B;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="290.0" layoutY="10.0" prefHeight="36.0" prefWidth="273.0" text="USERS DATA ENTRY" textFill="WHITE" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="289.0">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="CONTENT_SAVE_ALL" size="35" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <MaterialDesignIconView fx:id="iconClose" fill="WHITE" glyphName="CLOSE_CIRCLE" layoutX="1068.0" layoutY="20.0" onMouseClicked="#mouseClickAction" size="18" AnchorPane.rightAnchor="14.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect></MaterialDesignIconView>
+                  <MaterialDesignIconView fx:id="iconMax" fill="WHITE" glyphName="CHECKBOX_MULTIPLE_BLANK" layoutX="1041.0" layoutY="21.0" onMouseClicked="#mouseClickAction" size="18" AnchorPane.rightAnchor="41.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect></MaterialDesignIconView>
+                  <MaterialDesignIconView fx:id="iconMin" fill="WHITE" glyphName="MINUS_CIRCLE" layoutX="1011.0" layoutY="21.0" onMouseClicked="#mouseClickAction" size="18" AnchorPane.rightAnchor="71.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect></MaterialDesignIconView>
+                  <Label fx:id="lblMenu" layoutX="1067.0" layoutY="27.0" prefHeight="38.0" prefWidth="21.0" AnchorPane.rightAnchor="11.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="DOTS_VERTICAL" size="22" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane fx:id="holderPane" prefHeight="506.0" prefWidth="1096.0" stylesheets="@style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXTabPane layoutY="-1.0" prefHeight="548.0" prefWidth="1096.0" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <tabs>
+                        <Tab text="Home">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="476.0" prefWidth="1096.0">
+                                 <children>
+                                    <ImageView fitHeight="137.0" fitWidth="657.0" layoutX="279.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="279.0" AnchorPane.rightAnchor="247.64935302734375">
+                                       <image>
+                                          <Image url="@../../image/collections/background.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                    <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT" layoutX="330.0" layoutY="368.0" onMouseClicked="#openStudent" size="150">
+                                       <effect>
+                                          <Reflection />
+                                       </effect>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></MaterialDesignIconView>
+                                    <MaterialDesignIconView fill="WHITE" glyphName="WORKER" layoutX="664.0" layoutY="368.0" onMouseClicked="#openStaff" size="150">
+                                       <effect>
+                                          <Reflection />
+                                       </effect>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></MaterialDesignIconView>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USER_SECRET" layoutX="532.0" layoutY="364.0" onMouseClicked="#openTeacher" size="125">
+                                       <effect>
+                                          <Reflection />
+                                       </effect>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></FontAwesomeIconView>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Course">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1081.0">
+                                 <children>
+                                    <TitledPane animated="false" layoutX="14.0" layoutY="5.0" prefHeight="489.0" prefWidth="271.0" styleClass="titledPane" stylesheets="@style.css" text="Add New Course" AnchorPane.leftAnchor="14.0">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="442.0" prefWidth="269.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <GridPane layoutX="20.0" layoutY="26.0" prefHeight="312.0" prefWidth="237.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <JFXTextField fx:id="txtCourse" labelFloat="true" promptText="Course">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </JFXTextField>
+                                                      <JFXTextField fx:id="txtDuration" labelFloat="true" layoutX="10.0" layoutY="42.0" promptText="Duration (in year)" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </JFXTextField>
+                                                      <JFXCheckBox fx:id="checkBox" text="Semester " GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </JFXCheckBox>
+                                                   </children>
+                                                </GridPane>
+                                                <JFXButton fx:id="btnAdd" layoutX="149.0" layoutY="396.0" onAction="#addCourse" prefHeight="35.0" prefWidth="96.0" style="-fx-background-color: #129057;" text="ADD" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Roboto Medium" size="15.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="ROCKET" size="17.0" wrappingWidth="14.785714149475098" />
+                                                   </graphic>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </JFXButton>
+                                                <JFXButton fx:id="btnRemove" layoutX="24.0" layoutY="396.0" onAction="#removeCourse" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #d04f00;" text="REMOVE" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Roboto Medium" size="15.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_BASKET" size="15" />
+                                                   </graphic>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </JFXButton>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TableView fx:id="courseTable" layoutX="296.0" layoutY="64.0" onMouseClicked="#tableClickAction" prefHeight="430.0" prefWidth="792.0" stylesheets="@../../css/student.css" AnchorPane.leftAnchor="296.0" AnchorPane.rightAnchor="8.0">
+                                       <columns>
+                                          <TableColumn fx:id="colSno" prefWidth="75.0" text="S.no" />
+                                          <TableColumn fx:id="colCourse" prefWidth="170.0" text="Course Name" />
+                                          <TableColumn fx:id="colDuration" prefWidth="237.0" text="Duration of Course" />
+                                          <TableColumn fx:id="colSemester" prefWidth="309.0" text="Number of Semesters" />
+                                       </columns>
+                                    </TableView>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="307.0" layoutY="6.0" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #31445A;" text="Filter By:" textFill="WHITE">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXButton fx:id="btnViewAll" layoutX="663.0" layoutY="30.0" onAction="#showAllCourse" ripplerFill="#ae2727" text="View All" textFill="WHITE" underline="true" AnchorPane.leftAnchor="663.0">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></JFXButton>
+                                    <JFXTextField fx:id="txtSearch" layoutX="907.0" layoutY="24.0" maxWidth="173.0" minWidth="173.0" onInputMethodTextChanged="#searchCourse" onKeyReleased="#searchCourse" prefHeight="31.0" prefWidth="173.0" promptText="Search By Course" style="-fx-prompt-text-fill: #fff; -fx-text-fill: #fff;" AnchorPane.rightAnchor="16.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Subject">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1081.0">
+                                 <children>
+                                    <TitledPane animated="false" layoutX="14.0" layoutY="5.0" prefHeight="489.0" prefWidth="271.0" styleClass="titledPane" stylesheets="@style.css" text="Add New Subject">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="442.0" prefWidth="269.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <GridPane layoutX="20.0" layoutY="26.0" prefHeight="361.0" prefWidth="237.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <JFXComboBox fx:id="comboCourse" prefHeight="29.0" prefWidth="223.0" promptText="Course" style="-fx-font-size: 14;" styleClass="comboBox" stylesheets="@style.css">
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" />
+                                                         </GridPane.margin>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor></JFXComboBox>
+                                                      <JFXComboBox fx:id="comboSemester" prefHeight="29.0" prefWidth="223.0" promptText="Semester" style="-fx-font-size: 14;" styleClass="comboBox" stylesheets="@style.css" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" />
+                                                         </GridPane.margin>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor></JFXComboBox>
+                                                      <JFXTextField fx:id="txtSubject" labelFloat="true" promptText="Subject" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </JFXTextField>
+                                                      <JFXTextField fx:id="txtFull" labelFloat="true" promptText="Full Marks" GridPane.rowIndex="3">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </JFXTextField>
+                                                      <JFXTextField fx:id="txtPass" labelFloat="true" promptText="Pass Marks" GridPane.rowIndex="4">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </JFXTextField>
+                                                      <JFXTextField fx:id="txtTheory" labelFloat="true" promptText="Theoritical Marks" GridPane.rowIndex="5" />
+                                                      <JFXTextField fx:id="txtPractical" labelFloat="true" promptText="Practical Marks" GridPane.rowIndex="6" />
+                                                   </children>
+                                                </GridPane>
+                                                <JFXButton fx:id="btnAddSubject" layoutX="149.0" layoutY="407.0" onAction="#addSubject" prefHeight="35.0" prefWidth="96.0" style="-fx-background-color: #129057;" text="ADD" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Roboto Medium" size="15.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="ROCKET" size="17.0" wrappingWidth="14.785714149475098" />
+                                                   </graphic>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </JFXButton>
+                                                <JFXButton fx:id="btnRemoveSubject" layoutX="24.0" layoutY="407.0" onAction="#removeSubject" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #d04f00;" text="REMOVE" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Roboto Medium" size="15.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_BASKET" size="15" />
+                                                   </graphic>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </JFXButton>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TableView fx:id="subjectTable" layoutX="296.0" layoutY="64.0" onMouseClicked="#tableClickAction" prefHeight="430.0" prefWidth="792.0" stylesheets="@../../css/student.css">
+                                       <columns>
+                                          <TableColumn fx:id="colSno1" minWidth="5.0" prefWidth="55.0" text="S.no" />
+                                          <TableColumn fx:id="colCourse1" prefWidth="125.0" text="Course" />
+                                          <TableColumn fx:id="colSemester1" prefWidth="110.0" text="Semester" />
+                                          <TableColumn fx:id="colSubject1" prefWidth="100.0" text="Subject Name" />
+                                          <TableColumn fx:id="colFull" maxWidth="203.0" prefWidth="100.0" text="Full Marks" />
+                                          <TableColumn fx:id="colPass" maxWidth="222.0" prefWidth="100.0" text="Pass Marks" />
+                                          <TableColumn fx:id="colTheory" maxWidth="203.0" prefWidth="100.0" text="Theory" />
+                                          <TableColumn fx:id="colPractical" maxWidth="222.0" prefWidth="100.0" text="Practical" />
+                                       </columns>
+                                    </TableView>
+                                    <JFXComboBox fx:id="comboCourse1" layoutX="417.0" layoutY="25.0" prefHeight="30.0" prefWidth="142.0" promptText="Course" style="-fx-font-size: 14;" stylesheets="@style.css">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></JFXComboBox>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="307.0" layoutY="6.0" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #31445A;" text="Filter By:" textFill="WHITE">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXComboBox fx:id="comboSemester1" layoutX="592.0" layoutY="25.0" prefHeight="30.0" prefWidth="142.0" promptText="Semester" style="-fx-font-size: 14;" stylesheets="@style.css">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></JFXComboBox>
+                                    <JFXButton fx:id="btnshowAll" layoutX="778.0" layoutY="32.0" onAction="#showAllSubject" ripplerFill="#228da8" text="View All" textFill="WHITE">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></JFXButton>
+                                    <JFXTextField fx:id="txtSearchSubject" layoutX="907.0" layoutY="24.0" maxWidth="173.0" minWidth="173.0" onInputMethodTextChanged="#searchSubject" onKeyReleased="#searchSubject" prefHeight="31.0" prefWidth="173.0" promptText="Search By Subject Name" style="-fx-prompt-text-fill: #fff; -fx-text-fill: #fff;" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children></AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</StackPane>

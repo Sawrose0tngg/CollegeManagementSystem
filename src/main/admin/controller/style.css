@@ -1,0 +1,22 @@
+.jfx-tab-pane .headers-region{
+    -fx-background-color:  #31445A;
+}
+.jfx-tab-pane .tab-header-background{
+    -fx-background-color:  #31445A;
+}
+.jfx-tab-pane .tab-selected-line{
+    -fx-stroke: brown;
+    -fx-stroke-width: 3pt;
+}
+.titledPane{
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+}
+.titledPane>.title{
+    -fx-background-color: #31445A;
+    -fx-font-family:'Roboto medium' ;
+    -fx-font-size:13;
+}
+.titledPane> .title> .arrow-button .arrow{
+    -fx-background-color: white;
+}

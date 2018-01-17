@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="602.0" prefWidth="742.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="common.function.AdminProfileController">
+   <children>
+      <ImageView fx:id="imageProfile" fitHeight="160.0" fitWidth="160.0" layoutX="14.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/collections/myPhoto.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="29.0" layoutY="207.0" onAction="#uploadPhoto" style="-fx-background-color: brown;" text="Upload Photo" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <MaterialDesignIconView fill="WHITE" glyphName="UPLOAD" size="20" />
+         </graphic>
+      </JFXButton>
+      <AnchorPane layoutX="200.0" layoutY="25.0" prefHeight="573.0" prefWidth="522.0">
+         <children>
+            <GridPane layoutY="29.0" prefHeight="180.0" prefWidth="522.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <JFXTextField fx:id="txtFirst" labelFloat="true" prefWidth="261.0" promptText="First Name" unFocusColor="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtLast" labelFloat="true" layoutX="10.0" layoutY="24.0" prefWidth="261.0" promptText="Last Name" unFocusColor="WHITE" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtEmail" labelFloat="true" prefWidth="261.0" promptText="Email" unFocusColor="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtContact" labelFloat="true" prefWidth="261.0" promptText="Contact Number" unFocusColor="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="comboAdmin" prefHeight="31.0" prefWidth="241.0" promptText="Admin Type" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </JFXComboBox>
+                  <Label text="Gender:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <JFXRadioButton fx:id="rdMale" text="Male" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="76.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gender" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="rdFemale" layoutX="331.0" layoutY="158.0" text="Female" toggleGroup="$gender" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="170.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+            </GridPane>
+            <JFXComboBox fx:id="comboQuestion" layoutX="11.0" layoutY="214.0" prefHeight="31.0" prefWidth="494.0" promptText="Security Question" />
+            <JFXTextField fx:id="txtAnswer" labelFloat="true" layoutX="10.0" layoutY="271.0" maxWidth="494.0" minWidth="494.0" prefHeight="36.0" prefWidth="494.0" promptText="Answer" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <Pane layoutY="326.0" prefHeight="31.0" prefWidth="172.0" style="-fx-background-color: #2A3F54; -fx-background-radius: 10;">
+               <children>
+                  <Label layoutX="28.0" layoutY="3.0" text="Security Details" textFill="#ababab">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Pane>
+            <GridPane layoutX="-1.0" layoutY="365.0" prefHeight="139.0" prefWidth="522.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <JFXPasswordField fx:id="txtPassword" labelFloat="true" promptText="Password" unFocusColor="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXPasswordField fx:id="txtNewPassword" labelFloat="true" layoutX="10.0" layoutY="15.0" promptText="New Password" unFocusColor="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXPasswordField fx:id="txtRePassword" labelFloat="true" layoutX="10.0" layoutY="60.0" promptText="New Re-Password" unFocusColor="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton onAction="#changePasswordAction" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #F39C12;" text="Change Password" textFill="WHITE" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </JFXButton>
+               </children>
+            </GridPane>
+            <JFXButton layoutX="126.0" layoutY="520.0" onAction="#saveChanges" prefHeight="31.0" prefWidth="271.0" style="-fx-background-color: #2A3F54;" text="Save Changes" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="FLOPPY" size="20" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="200.0" layoutY="4.0" prefHeight="31.0" prefWidth="172.0" style="-fx-background-color: #2A3F54; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="29.0" layoutY="2.0" text="General Details" textFill="#ababab">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Pane>
+      <Label layoutX="15.0" layoutY="313.0" text="Main Admin">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXToggleButton fx:id="toggleMain" layoutX="24.0" layoutY="333.0" onAction="#toggleAction" text="Main Admin" />
+   </children>
+</AnchorPane>

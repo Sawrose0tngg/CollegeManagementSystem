@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="587.0" prefWidth="673.0" style="-fx-background-color: #e0f7fa; -fx-border-color: #000; -fx-border-width: 2; -fx-border-radius: 5;" stylesheets="@../../css/common.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.system.RegisterController">
+   <children>
+      <BorderPane layoutX="8.0" layoutY="8.0" prefHeight="576.0" prefWidth="661.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="6.0">
+         <top>
+            <AnchorPane prefHeight="52.0" prefWidth="200.0" style="-fx-background-color: #4dd0e1;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="262.0" layoutY="12.0" text="Admin Signup">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="624.0" layoutY="5.0" stylesheets="@../../css/common.css">
+                     <graphic>
+                        <MaterialDesignIconView fx:id="lblClose" glyphName="CLOSE_CIRCLE" onMouseClicked="#mouseClick" size="20" text="" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="531.0" prefWidth="665.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton alignment="CENTER" layoutX="41.0" layoutY="472.0" onAction="#saveAdmin" prefHeight="17.0" prefWidth="407.0" style="-fx-background-color: #4dd0e1; -fx-border-color: #000; -fx-border-radius: 7;" stylesheets="@../../css/common.css" text="Signup">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <MaterialDesignIconView glyphName="LOGOUT" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXToggleButton fx:id="btnToggle" contentDisplay="RIGHT" layoutX="433.0" layoutY="-11.0" onAction="#adminToggleAction" prefHeight="58.0" prefWidth="224.0" text="Signup as Main Admin" toggleLineColor="#41afda" unToggleColor="#009688" unToggleLineColor="#bfbbbb">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXToggleButton>
+                  <JFXTextField fx:id="txtFirst" focusColor="#0e7b94" labelFloat="true" layoutX="30.0" layoutY="66.0" maxWidth="200.0" minWidth="183.0" prefHeight="36.0" prefWidth="200.0" promptText="First Name">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtLast" focusColor="#0e7b94" labelFloat="true" layoutX="266.0" layoutY="66.0" maxWidth="200.0" minWidth="190.0" prefHeight="36.0" prefWidth="200.0" promptText="Last Name">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtEmail" focusColor="#0e7b94" labelFloat="true" layoutX="31.0" layoutY="138.0" maxWidth="200.0" minWidth="182.0" prefHeight="36.0" prefWidth="200.0" promptText="Email">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtContact" focusColor="#0e7b94" labelFloat="true" layoutX="266.0" layoutY="138.0" maxWidth="200.0" minWidth="190.0" prefHeight="36.0" prefWidth="200.0" promptText="Contact Number">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <ImageView fx:id="imgProfile" fitHeight="113.0" fitWidth="128.0" layoutX="504.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" />
+                  <JFXPasswordField fx:id="txtPassword" focusColor="#0e7b94" labelFloat="true" layoutX="33.0" layoutY="214.0" maxWidth="200.0" minWidth="183.0" prefHeight="36.0" prefWidth="200.0" promptText="Password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXPasswordField fx:id="txtRePassword" focusColor="#0e7b94" labelFloat="true" layoutX="266.0" layoutY="214.0" maxWidth="200.0" minWidth="190.0" prefHeight="36.0" prefWidth="200.0" promptText="Re-Password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXComboBox fx:id="comboAdmin" layoutX="40.0" layoutY="293.0" prefHeight="25.0" prefWidth="184.0" promptText="Admin Type">
+                      
+                  </JFXComboBox>
+                  <Label layoutX="267.0" layoutY="299.0" text="Gender:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="513.0" layoutY="190.0" onAction="#uploadPhoto" prefHeight="18.0" prefWidth="114.0" style="-fx-background-color: #4dd0e1; -fx-border-color: #000; -fx-border-radius: 7;" stylesheets="@../../css/common.css" text="Upload Photo">
+                     <graphic>
+                        <MaterialDesignIconView glyphName="UPLOAD" size="18" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXRadioButton fx:id="radioMale" layoutX="322.0" layoutY="302.0" text="Male">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gender" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="radioFemale" layoutX="399.0" layoutY="303.0" text="Female" toggleGroup="$gender" />
+                  <Label layoutX="487.0" layoutY="480.0" text="Login  ">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblLogin" layoutX="528.0" layoutY="478.0" onMouseClicked="#mouseClick" text="here??" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <JFXComboBox fx:id="comboQuestion" layoutX="42.0" layoutY="361.0" prefHeight="25.0" prefWidth="441.0" promptText="Select Any One Security Question" />
+                  <Label layoutX="577.0" layoutY="479.0" text="for old user">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtAnswer" labelFloat="true" layoutX="38.0" layoutY="413.0" maxWidth="458.0" minWidth="443.0" prefHeight="36.0" prefWidth="458.0" promptText="Answer">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </AnchorPane>
+         </center>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </BorderPane>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

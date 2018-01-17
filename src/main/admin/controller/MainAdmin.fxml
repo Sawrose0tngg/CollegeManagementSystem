@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="823.0" stylesheets="@../../../../../../Downloads/Compressed/material-dashboard-fx-master/src/dashboard/custom.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.admin.controller.MainAdminController">
+   <children>
+      <BorderPane prefHeight="590.0" prefWidth="823.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="57.0" prefWidth="823.0" style="-fx-background-color: #222D32;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="298.0" layoutY="14.0" prefHeight="23.0" prefWidth="228.0" style="-fx-font-size: 20; -fx-text-fill: #7387A8; -fx-font-weight: bold;" text="MAIN ADMIN" AnchorPane.leftAnchor="298.0" AnchorPane.rightAnchor="298.0">
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                  </Label>
+                  <AnchorPane layoutX="663.0" layoutY="9.0" prefHeight="42.0" prefWidth="52.0">
+                     <children>
+                        <MaterialDesignIconView fill="#a1aec4" glyphName="ACCOUNT_MULTIPLE_PLUS" layoutY="40.0" size="30" text="" />
+                        <Label fx:id="lblRequest" alignment="CENTER" layoutX="23.0" layoutY="7.0" prefHeight="21.0" prefWidth="25.0" style="-fx-background-color: #DD4B39; -fx-background-radius: 10;" text="15" textFill="#dfe2e8">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <JFXButton layoutX="727.0" layoutY="23.0" onAction="#logOff" text="LOGOUT" textFill="#a1aec4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="#a1aec4" glyphName="LOGOUT" size="20" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <VBox prefHeight="224.0" prefWidth="140.0" style="-fx-background-color: #2A3F54;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="66.0" prefWidth="140.0" style="-fx-alignment: center; -fx-font-size: 16; -fx-text-fill: #7387A8; -fx-border-color: #7387A8; -fx-border-width: 0 0 2 0;" text="DASHBOARD" />
+                  <JFXButton fx:id="btnHome" onAction="#openHome" prefHeight="50.0" prefWidth="139.0" style="-fx-alignment: left;" text="Home" textFill="#a1aec4">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="#a1aec4" glyphName="DASHBOARD" size="17.0" wrappingWidth="43.0" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnWidgets" layoutX="10.0" layoutY="151.0" onAction="#openWidgets" prefHeight="50.0" prefWidth="139.0" style="-fx-alignment: left;" text="Widgets" textFill="#a1aec4">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="#a1aec4" glyphName="VIEW_GRID" size="17.0" wrappingWidth="42.99997329711914" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnAdmin" layoutX="10.0" layoutY="193.0" onAction="#openAdmins" prefHeight="50.0" prefWidth="139.0" style="-fx-alignment: left;" text="Admins" textFill="#a1aec4">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="#a1aec4" glyphName="USERS" size="17.0" wrappingWidth="43.0" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnProfile" layoutX="10.0" layoutY="176.0" onAction="#openProfile" prefHeight="50.0" prefWidth="139.0" style="-fx-alignment: left;" text="Profile" textFill="#a1aec4">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="#a1aec4" glyphName="PENCIL_SQUARE_ALT" size="17.0" wrappingWidth="43.0" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane fx:id="holderPane" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

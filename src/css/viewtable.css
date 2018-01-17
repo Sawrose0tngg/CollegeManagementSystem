@@ -1,0 +1,4 @@
+.table-view .table-cell{
+    -fx-font-size: 12px;
+    -fx-text-fill: #000;
+}

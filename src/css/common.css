@@ -1,0 +1,15 @@
+.button:hover {
+    -fx-text-fill: #fff;    
+}
+.glyph-icon{
+    -fx-fill: #000;
+}
+.button:hover .glyph-icon {
+    -fx-fill: #fff;
+}
+.label:hover .glyph-icon {
+    -fx-fill: #fff;
+}
+.seto:hover {
+    -fx-font-weight: bold;
+}

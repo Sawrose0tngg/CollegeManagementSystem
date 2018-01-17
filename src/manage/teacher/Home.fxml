@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="670.0" prefWidth="1110.0" stylesheets="@../../css/custom.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manage.teacher.HomeController">
+   <children>
+      <StackPane fx:id="rootPane" onMouseClicked="#addDepartment" prefHeight="670.0" prefWidth="1110.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <HBox fx:id="groupHolder" layoutX="-1.0" layoutY="13.0" prefHeight="181.0" prefWidth="1100.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Group fx:id="groupRegistered">
+               <children>
+                  <Pane layoutX="6.0" layoutY="39.0" prefHeight="135.0" prefWidth="263.0" style="-fx-background-color: white; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                     <children>
+                        <Pane layoutX="19.0" layoutY="-29.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #1564C0; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="23.0" layoutY="67.0" size="50" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="11.0" layoutY="86.0" minHeight="5.0" prefHeight="5.0" prefWidth="238.0" style="-fx-background-color: #283593; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                        <Label layoutX="19.0" layoutY="104.0" prefHeight="22.0" prefWidth="229.0" text="Total number of registered teachers">
+                           <font>
+                              <Font name="Roboto Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="4.0" prefHeight="22.0" prefWidth="88.0" text="REGISTERED" textFill="#8d8b8b">
+                           <font>
+                              <Font name="Roboto Black" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTotalTeacher" alignment="TOP_RIGHT" layoutX="159.0" layoutY="41.0" prefHeight="22.0" prefWidth="88.0" text="118">
+                           <font>
+                              <Font name="Roboto Black" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Group>
+            <Group fx:id="groupTarget">
+               <children>
+                  <Pane layoutX="6.0" layoutY="39.0" prefHeight="135.0" prefWidth="263.0" style="-fx-background-color: white; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                     <children>
+                        <Pane layoutX="19.0" layoutY="-29.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #F87951; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" layoutX="24.0" layoutY="67.0" size="50" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="11.0" layoutY="86.0" minHeight="5.0" prefHeight="5.0" prefWidth="238.0" style="-fx-background-color: #D8544F; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                        <Label layoutX="26.0" layoutY="104.0" prefHeight="22.0" prefWidth="175.0" text="Recenlty register teachers">
+                           <font>
+                              <Font name="Roboto Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="127.0" layoutY="4.0" prefHeight="22.0" prefWidth="132.0" text="RECENTLY REGISTER" textFill="#8d8b8b">
+                           <font>
+                              <Font name="Roboto Black" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblRecentTeacher" alignment="TOP_RIGHT" layoutX="159.0" layoutY="41.0" prefHeight="22.0" prefWidth="88.0" text="50">
+                           <font>
+                              <Font name="Roboto Black" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Group>
+            <Group fx:id="groupGents">
+               <children>
+                  <Pane layoutX="6.0" layoutY="39.0" prefHeight="135.0" prefWidth="263.0" style="-fx-background-color: white; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                     <children>
+                        <Pane layoutX="19.0" layoutY="-29.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: rgb(0, 170, 207); -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="MARS" layoutX="29.0" layoutY="67.0" size="55" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="11.0" layoutY="86.0" minHeight="5.0" prefHeight="5.0" prefWidth="238.0" style="-fx-background-color: #0288D1; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                        <Label layoutX="19.0" layoutY="104.0" prefHeight="22.0" prefWidth="229.0" text="Total number of male teacher">
+                           <font>
+                              <Font name="Roboto Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="4.0" prefHeight="22.0" prefWidth="88.0" text="GENTS" textFill="#8d8b8b">
+                           <font>
+                              <Font name="Roboto Black" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblMaleTeacher" alignment="TOP_RIGHT" layoutX="159.0" layoutY="41.0" prefHeight="22.0" prefWidth="88.0" text="59">
+                           <font>
+                              <Font name="Roboto Black" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Group>
+            <Group fx:id="groupLadies">
+               <children>
+                  <Pane layoutX="6.0" layoutY="39.0" prefHeight="135.0" prefWidth="263.0" style="-fx-background-color: white; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                     <children>
+                        <Pane layoutX="19.0" layoutY="-29.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #00B3A0; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="VENUS" layoutX="33.0" layoutY="70.0" size="55" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="11.0" layoutY="86.0" minHeight="5.0" prefHeight="5.0" prefWidth="238.0" style="-fx-background-color: #00897B; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                        <Label layoutX="19.0" layoutY="104.0" prefHeight="22.0" prefWidth="229.0" text="Total number of female teacher">
+                           <font>
+                              <Font name="Roboto Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="4.0" prefHeight="22.0" prefWidth="88.0" text="LADIES" textFill="#8d8b8b">
+                           <font>
+                              <Font name="Roboto Black" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblFemaleTeacher" alignment="TOP_RIGHT" layoutX="159.0" layoutY="41.0" prefHeight="22.0" prefWidth="88.0" text="59">
+                           <font>
+                              <Font name="Roboto Black" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Group>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="12.0" layoutY="214.0" prefHeight="436.0" prefWidth="267.0" style="-fx-background-color: white; -fx-background-radius: 3; -fx-border-radius: 3; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);" AnchorPane.leftAnchor="12.0">
+         <children>
+            <Pane layoutY="-3.0" prefHeight="131.0" prefWidth="267.0" style="-fx-background-color: #00AACF; -fx-background-radius: 5 5 0 0;">
+               <children>
+                  <Label fx:id="lblName" layoutX="135.0" layoutY="23.0" prefHeight="30.0" prefWidth="116.0" text="Full Name" textFill="#fffefe">
+                     <font>
+                        <Font name="Roboto Medium" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="144.0" layoutY="53.0" prefHeight="25.0" prefWidth="116.0" text="Logged user" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Medium" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imageProfile" fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/collections/myPhoto.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <VBox layoutX="16.0" layoutY="141.0" prefHeight="202.0" prefWidth="238.0">
+               <children>
+                  <Label fx:id="lblFullName" prefHeight="40.0" prefWidth="238.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="full name">
+                     <graphic>
+                        <MaterialDesignIconView fill="#7387a8" glyphName="ACCOUNT" size="17.0" wrappingWidth="20.666631162166595" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="lblEmail" prefHeight="40.0" prefWidth="238.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="danmlayah@gmail.com">
+                     <graphic>
+                        <MaterialDesignIconView fill="#7387a8" glyphName="EMAIL" size="17.0" wrappingWidth="22.000005185604095" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="lblMobile" prefHeight="40.0" prefWidth="238.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="+254717160344">
+                     <graphic>
+                        <MaterialDesignIconView fill="#7387a8" glyphName="PHONE" size="17.0" wrappingWidth="20.666692197322845" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="lblAdmin" layoutX="10.0" layoutY="68.0" prefHeight="40.0" prefWidth="238.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Created on 17th March 2016">
+                     <graphic>
+                        <MaterialDesignIconView fill="#7387a8" glyphName="ACCOUNT_PLUS" size="17.0" wrappingWidth="20.666692197322845" />
+                     </graphic>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <StackPane fx:id="deptStackPane" layoutX="290.0" layoutY="214.0" prefHeight="436.0" prefWidth="489.0" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="331.0">
+         <children>
+            <AnchorPane prefHeight="436.0" prefWidth="400.0" style="-fx-background-color: white; -fx-background-radius: 3; -fx-border-radius: 3; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+               <children>
+                  <TableView fx:id="subjectTable" layoutX="6.0" layoutY="62.0" onMouseClicked="#tableClickAction" prefHeight="335.0" prefWidth="477.0" stylesheets="@../../css/student.css">
+                     <columns>
+                        <TableColumn fx:id="colSno1" minWidth="5.0" prefWidth="55.0" text="S.no" />
+                        <TableColumn fx:id="colCourse1" prefWidth="125.0" text="Course" />
+                        <TableColumn fx:id="colSemester1" prefWidth="110.0" text="Semester" />
+                        <TableColumn fx:id="colSubject1" prefWidth="100.0" text="Subject Name" />
+                        <TableColumn fx:id="colFull" maxWidth="203.0" prefWidth="100.0" text="Full Marks" />
+                        <TableColumn fx:id="colPass" maxWidth="222.0" prefWidth="100.0" text="Pass Marks" />
+                        <TableColumn fx:id="colTheory" maxWidth="203.0" prefWidth="100.0" text="Theory" />
+                        <TableColumn fx:id="colPractical" maxWidth="222.0" prefWidth="100.0" text="Practical" />
+                     </columns>
+                  </TableView>
+                  <Pane layoutY="-1.0" prefHeight="60.0" prefWidth="265.0" style="-fx-background-color: #00B3A0; -fx-background-radius: 5 5 0 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label layoutX="16.0" layoutY="14.0" prefHeight="30.0" prefWidth="192.0" text="School Departments" textFill="#fffefe">
+                           <font>
+                              <Font name="Roboto Medium" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Button fx:id="btnAddDepartment" layoutX="200.0" layoutY="372.0" mnemonicParsing="false" onMouseClicked="#addDepartment" style="-fx-background-color: #00B3A0;" styleClass="fab" AnchorPane.rightAnchor="15.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="24.0" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <AnchorPane layoutX="789.0" layoutY="214.0" prefHeight="436.0" prefWidth="312.0" style="-fx-background-color: white; -fx-background-radius: 3; -fx-border-radius: 3; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+         <children>
+            <Pane prefHeight="60.0" prefWidth="312.0" style="-fx-background-color: #F87951; -fx-background-radius: 5 5 0 0;">
+               <children>
+                  <Label layoutX="76.0" layoutY="15.0" prefHeight="30.0" prefWidth="207.0" text="Recent Notifications " textFill="#fffefe">
+                     <font>
+                        <Font name="Roboto Medium" size="18.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BELL" layoutX="14.0" layoutY="38.0" size="24.0" wrappingWidth="32.85714340209961" />
+               </children>
+            </Pane>
+            <JFXTextArea fx:id="txtNotify" editable="false" layoutX="8.0" layoutY="67.0" maxWidth="369.0" minWidth="297.0" prefHeight="355.0" prefWidth="297.0" promptText="No Recent Notification">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextArea>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
